@@ -2,7 +2,7 @@
 # Kernel/System/ImportExport.pm - all import and export functions
 # Copyright (C) 2001-2009 OTRS AG, http://otrs.org/
 # --
-# $Id: ImportExport.pm,v 1.32.2.1 2009-10-06 16:56:03 ub Exp $
+# $Id: ImportExport.pm,v 1.32.2.2 2009-10-08 23:42:16 ub Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -17,7 +17,7 @@ use warnings;
 use Kernel::System::CheckItem;
 
 use vars qw($VERSION);
-$VERSION = qw($Revision: 1.32.2.1 $) [1];
+$VERSION = qw($Revision: 1.32.2.2 $) [1];
 
 =head1 NAME
 
@@ -2144,7 +2144,10 @@ sub Import {
     $Result{Failed}  = 0;
 
     IMPORTDATAROW:
+    my $LineCount = 0;
     for my $ImportDataRow ( @{$ImportData} ) {
+
+        $LineCount++;
 
         # import one row
         my $Success = $ObjectBackend->ImportDataSave(
@@ -2169,6 +2172,10 @@ sub Import {
     $Self->{LogObject}->Log(
         Priority => 'notice',
         Message  => "Import of $Result{Success} records ($TemplateData->{Object}): success!",
+    );
+    $Self->{LogObject}->Log(
+        Priority => 'notice',
+        Message  => "Last processed line number of import file: $LineCount",
     );
 
     return \%Result;
@@ -2239,6 +2246,6 @@ did not receive this file, see http://www.gnu.org/licenses/gpl-2.0.txt.
 
 =head1 VERSION
 
-$Revision: 1.32.2.1 $ $Date: 2009-10-06 16:56:03 $
+$Revision: 1.32.2.2 $ $Date: 2009-10-08 23:42:16 $
 
 =cut
