@@ -2,7 +2,7 @@
 # ImportExportFormatCSV.t - all import export tests for the CSV format backend
 # Copyright (C) 2001-2009 OTRS AG, http://otrs.org/
 # --
-# $Id: ImportExportFormatCSV.t,v 1.8.4.1 2009-10-08 23:41:31 ub Exp $
+# $Id: ImportExportFormatCSV.t,v 1.8.4.2 2009-10-09 10:00:19 ub Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -1005,7 +1005,7 @@ my $ImportDataTests = [
         ReferenceImportData => [
             [ 'Row1-Col1', 'Row1-Col2',  'Row1-Col3' ],
             [ 'Row2-Col1', 'Row2-Col2',  'Row2-Col3' ],
-            [ 'Row3-Col1', '0Row3-Col2', 'Row3-Col3' ],    # this works!
+            [ 'Row3-Col1', '0Row3-Col2', 'Row3-Col3' ],
         ],
     },
 
@@ -1025,7 +1025,7 @@ my $ImportDataTests = [
         },
         ReferenceImportData => [
             [ 'Row1-Col1', 'Row1-Col2',  'Row1-Col3' ],
-            [ 'Row2-Col1', '0Row2-Col2', 'Row2-Col3' ],    # this does not work! Why?????
+            [ 'Row2-Col1', '0Row2-Col2', 'Row2-Col3' ],
             [ 'Row3-Col1', 'Row3-Col2',  'Row3-Col3' ],
         ],
     },
