@@ -2,7 +2,7 @@
 # Kernel/System/ImportExport/FormatBackend/CSV.pm - import/export backend for CSV
 # Copyright (C) 2001-2009 OTRS AG, http://otrs.org/
 # --
-# $Id: CSV.pm,v 1.25.2.1 2009-10-08 23:42:40 ub Exp $
+# $Id: CSV.pm,v 1.25.2.2 2009-10-09 10:00:46 ub Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -15,7 +15,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = qw($Revision: 1.25.2.1 $) [1];
+$VERSION = qw($Revision: 1.25.2.2 $) [1];
 
 =head1 NAME
 
@@ -288,7 +288,7 @@ sub ImportDataGet {
     );
 
     # create an in memory temp file and open it
-    my $FileContent;
+    my $FileContent = '';
     open my $FH, '+<', \$FileContent;
 
     # write source content
@@ -462,6 +462,6 @@ did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 
 =head1 VERSION
 
-$Revision: 1.25.2.1 $ $Date: 2009-10-08 23:42:40 $
+$Revision: 1.25.2.2 $ $Date: 2009-10-09 10:00:46 $
 
 =cut
