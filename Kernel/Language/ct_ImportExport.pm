@@ -1,9 +1,9 @@
 # --
 # Kernel/Language/ct_ImportExport.pm - the catalan translation of ImportExport
-# Copyright (C) 2001-2010 OTRS AG, http://otrs.org/
+# Copyright (C) 2001-2011 OTRS AG, http://otrs.org/
 # Copyright (C) 2008 Sistemes OTIC (ibsalut) - Antonio Linde
 # --
-# $Id: ct_ImportExport.pm,v 1.4 2010-05-17 13:49:17 ub Exp $
+# $Id: ct_ImportExport.pm,v 1.4.4.1 2011-05-05 09:34:48 ub Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -16,7 +16,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = qw($Revision: 1.4 $) [1];
+$VERSION = qw($Revision: 1.4.4.1 $) [1];
 
 sub Data {
     my $Self = shift;
@@ -46,6 +46,7 @@ sub Data {
     $Lang->{'Colon (:)'}                  = 'Dos punts (:)';
     $Lang->{'Dot (.)'}                    = 'Punt (.)';
     $Lang->{'Charset'}                    = 'Conjunt de caràcters';
+    $Lang->{'Include Column Headers'}     = '';
 
     return 1;
 }

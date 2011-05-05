@@ -1,8 +1,8 @@
 # --
 # Kernel/Language/de_ImportExport.pm - the german translation of ImportExport
-# Copyright (C) 2001-2010 OTRS AG, http://otrs.org/
+# Copyright (C) 2001-2011 OTRS AG, http://otrs.org/
 # --
-# $Id: de_ImportExport.pm,v 1.20 2010-05-17 13:49:17 ub Exp $
+# $Id: de_ImportExport.pm,v 1.20.4.1 2011-05-05 09:34:48 ub Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -15,7 +15,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = qw($Revision: 1.20 $) [1];
+$VERSION = qw($Revision: 1.20.4.1 $) [1];
 
 sub Data {
     my $Self = shift;
@@ -45,6 +45,7 @@ sub Data {
     $Lang->{'Colon (:)'}                  = 'Doppelpunkt (:)';
     $Lang->{'Dot (.)'}                    = 'Punkt (.)';
     $Lang->{'Charset'}                    = 'Zeichensatz';
+    $Lang->{'Include Column Headers'}     = 'Mit Spaltenüberschriften';
 
     return 1;
 }

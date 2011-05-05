@@ -1,8 +1,8 @@
 # --
 # Kernel/Language/zh_CN_ImportExport.pm - the Chinese simple translation of ImportExport
-# Copyright (C) 2001-2010 OTRS AG, http://otrs.org/
+# Copyright (C) 2001-2011 OTRS AG, http://otrs.org/
 # --
-# $Id: zh_CN_ImportExport.pm,v 1.3 2010-05-17 13:49:43 ub Exp $
+# $Id: zh_CN_ImportExport.pm,v 1.3.4.1 2011-05-05 09:34:48 ub Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -15,7 +15,7 @@ use strict;
 use warnings;
 
 use vars qw($VERSION);
-$VERSION = qw($Revision: 1.3 $) [1];
+$VERSION = qw($Revision: 1.3.4.1 $) [1];
 
 sub Data {
     my $Self = shift;
@@ -45,6 +45,7 @@ sub Data {
     $Lang->{'Colon (:)'}                  = 'Ã°ºÅ (:)';
     $Lang->{'Dot (.)'}                    = '¾äºÅ (.)';
     $Lang->{'Charset'}                    = '×Ö·û¼¯';
+    $Lang->{'Include Column Headers'}     = '';
 # add by Never
     $Lang->{'Template'}                   = 'Ä£°æ';
 
