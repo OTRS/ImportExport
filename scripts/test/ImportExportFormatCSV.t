@@ -1,8 +1,8 @@
 # --
 # ImportExportFormatCSV.t - all import export tests for the CSV format backend
-# Copyright (C) 2001-2010 OTRS AG, http://otrs.org/
+# Copyright (C) 2001-2011 OTRS AG, http://otrs.org/
 # --
-# $Id: ImportExportFormatCSV.t,v 1.10 2010-04-13 17:22:47 ub Exp $
+# $Id: ImportExportFormatCSV.t,v 1.10.4.1 2011-05-06 13:00:02 ub Exp $
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -109,6 +109,19 @@ my $FormatAttributesGet1Reference = [
             Translation  => 0,
             Size         => 20,
             MaxLength    => 20,
+        },
+    },
+    {
+        Key   => 'IncludeColumnHeaders',
+        Name  => 'Include Column Headers',
+        Input => {
+            Type => 'Selection',
+            Data => {
+                0 => 'No',
+                1 => 'Yes',
+            },
+            Translation  => 1,
+            PossibleNone => 0,
         },
     },
 ];
