@@ -1,6 +1,6 @@
 # --
 # Kernel/System/ImportExport.pm - all import and export functions
-# Copyright (C) 2001-2014 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2015 OTRS AG, http://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -1056,7 +1056,7 @@ sub MappingAdd {
 
     # insert a new mapping data row
     return if !$Self->{DBObject}->Do(
-        SQL => 'INSERT INTO imexport_mapping (template_id, position) VALUES (?, ?)',
+        SQL  => 'INSERT INTO imexport_mapping (template_id, position) VALUES (?, ?)',
         Bind => [ \$Param{TemplateID}, \$NewPosition ],
     );
 
@@ -1220,11 +1220,11 @@ sub MappingUp {
 
     # update positions
     $Self->{DBObject}->Do(
-        SQL => 'UPDATE imexport_mapping SET position = ? WHERE template_id = ? AND position = ?',
+        SQL  => 'UPDATE imexport_mapping SET position = ? WHERE template_id = ? AND position = ?',
         Bind => [ \$Position, \$Param{TemplateID}, \$PositionUpper ],
     );
     $Self->{DBObject}->Do(
-        SQL => 'UPDATE imexport_mapping SET position = ? WHERE id = ?',
+        SQL  => 'UPDATE imexport_mapping SET position = ? WHERE id = ?',
         Bind => [ \$PositionUpper, \$Param{MappingID} ],
     );
 
@@ -1281,11 +1281,11 @@ sub MappingDown {
 
     # update positions
     $Self->{DBObject}->Do(
-        SQL => 'UPDATE imexport_mapping SET position = ? WHERE template_id = ? AND position = ?',
+        SQL  => 'UPDATE imexport_mapping SET position = ? WHERE template_id = ? AND position = ?',
         Bind => [ \$Position, \$Param{TemplateID}, \$PositionDown ],
     );
     $Self->{DBObject}->Do(
-        SQL => 'UPDATE imexport_mapping SET position = ? WHERE id = ?',
+        SQL  => 'UPDATE imexport_mapping SET position = ? WHERE id = ?',
         Bind => [ \$PositionDown, \$Param{MappingID} ],
     );
 
@@ -1327,7 +1327,7 @@ sub MappingPositionRebuild {
     my $Counter = 0;
     for my $MappingID ( @{$MappingList} ) {
         $Self->{DBObject}->Do(
-            SQL => 'UPDATE imexport_mapping SET position = ? WHERE id = ?',
+            SQL  => 'UPDATE imexport_mapping SET position = ? WHERE id = ?',
             Bind => [ \$Counter, \$MappingID ],
         );
         $Counter++;
@@ -2056,8 +2056,7 @@ sub Export {
         );
 
         # create a lookup hash for the object attribute names
-        my %AttributeLookup
-            = map { $_->{Key} => $_->{Value} } @{ $MappingObjectAttributes->[0]->{Input}->{Data} };
+        my %AttributeLookup = map { $_->{Key} => $_->{Value} } @{ $MappingObjectAttributes->[0]->{Input}->{Data} };
 
         # get mapping data list
         my $MappingList = $Self->MappingList(

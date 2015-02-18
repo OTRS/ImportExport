@@ -1,6 +1,6 @@
 # --
 # Kernel/Output/HTML/LayoutImportExport.pm - provides generic HTML output for ImportExport
-# Copyright (C) 2001-2014 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2015 OTRS AG, http://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -65,7 +65,10 @@ sub ImportExportFormDataGet {
 
     # check needed stuff
     if ( !$Param{Item} ) {
-        $Self->{LogObject}->Log( Priority => 'error', Message => 'Need Item!' );
+        $Self->{LogObject}->Log(
+            Priority => 'error',
+            Message  => 'Need Item!'
+        );
         return;
     }
 
