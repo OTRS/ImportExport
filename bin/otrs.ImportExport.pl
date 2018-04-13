@@ -126,7 +126,7 @@ if ( lc $Opts{a} eq 'import' ) {
     for my $RetCode ( sort keys %{ $Result->{RetCode} } ) {
         my $Count = $Result->{RetCode}->{$RetCode} || 0;
         print STDOUT
-            "Import of $Result->{Counter} $Result->{Object} records: $Count $RetCode\n",
+            "Import of $Result->{Counter} $Result->{Object} records: $Count $RetCode\n",;
     }
     if ( $Result->{Failed} ) {
         print STDOUT
