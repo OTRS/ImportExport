@@ -1358,7 +1358,7 @@ sub _MaskTemplateEdit1 {
                 %Param,
                 ObjectName => $Param{Object},
                 FormatName => $Param{Format},
-                }
+            }
         );
     }
 
@@ -1700,7 +1700,7 @@ sub _MaskTemplateEdit3 {
                 Name => 'TemplateEdit3ElementRequired',
                 Data => {
                     Name => $Item->{Name} || '',
-                    ID => $ID,
+                    ID   => $ID,
                 },
             );
         }
