@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 # --
-# Copyright (C) 2001-2018 OTRS AG, https://otrs.com/
+# Copyright (C) 2001-2019 OTRS AG, https://otrs.com/
 # --
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ getopts( 'hn:a:i:o:', \%Opts );
 if ( $Opts{h} ) {
 
     print STDOUT "otrs.ImportExport.pl - an import/export tool\n";
-    print STDOUT "Copyright (C) 2001-2018 OTRS AG, https://otrs.com/\n";
+    print STDOUT "Copyright (C) 2001-2019 OTRS AG, https://otrs.com/\n";
     print STDOUT "\n";
     print STDOUT "usage: otrs.ImportExport.pl -n <TemplateNumber> -a import|export ";
     print STDOUT "[-i <SourceFile>] [-o <DestinationFile>]\n";
