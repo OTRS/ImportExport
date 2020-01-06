@@ -1,10 +1,9 @@
 # --
-# Kernel/Modules/AdminImportExport.pm - admin frontend of import export module
-# Copyright (C) 2001-2015 OTRS AG, http://otrs.com/
+# Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (AGPL). If you
-# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
 # --
 
 package Kernel::Modules::AdminImportExport;
@@ -855,7 +854,7 @@ sub Run {
             $Self->{LayoutObject}->Block(
                 Name => 'TemplateEdit5Element',
                 Data => {
-                    Name => $Item->{Name} || '',
+                    Name      => $Item->{Name} || '',
                     InputStrg => $InputString,
                     ID        => $Item->{Key},
                 },
@@ -1368,7 +1367,7 @@ sub _MaskTemplateEdit1 {
                 %Param,
                 ObjectName => $Param{Object},
                 FormatName => $Param{Format},
-                }
+            }
         );
     }
 
@@ -1579,7 +1578,7 @@ sub _MaskTemplateEdit2 {
         $Self->{LayoutObject}->Block(
             Name => 'TemplateEdit2Element',
             Data => {
-                Name => $Item->{Name} || '',
+                Name         => $Item->{Name} || '',
                 InputStrg    => $InputString,
                 ID           => $ID,
                 ErrorMessage => $ErrorMessage,
@@ -1698,7 +1697,7 @@ sub _MaskTemplateEdit3 {
         $Self->{LayoutObject}->Block(
             Name => 'TemplateEdit3Element',
             Data => {
-                Name => $Item->{Name} || '',
+                Name      => $Item->{Name} || '',
                 InputStrg => $InputString,
                 ID        => $ID,
             },
@@ -1710,7 +1709,7 @@ sub _MaskTemplateEdit3 {
                 Name => 'TemplateEdit3ElementRequired',
                 Data => {
                     Name => $Item->{Name} || '',
-                    ID => $ID,
+                    ID   => $ID,
                 },
             );
         }
